@@ -1,0 +1,10 @@
+services:
+  wasmedge:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    image: tesi
+    container_name: tesi
+    volumes:
+      - .:/app
+    command: wasmedge /app/hello.wasm
