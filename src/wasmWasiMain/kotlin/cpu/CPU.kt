@@ -9,13 +9,13 @@ fun fibonacciSingleWASM(n: Int): Int {
     if (n <= 1) return n
     var a = 0
     var b = 1
-    var result = 0
+    var temp: Int
     for (i in 2..n) {
-        result = a + b
+        temp = a + b
         a = b
-        b = result
+        b = temp
     }
-    return result
+    return b
 }
 
 /**

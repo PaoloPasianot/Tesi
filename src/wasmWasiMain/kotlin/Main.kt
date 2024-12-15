@@ -8,11 +8,13 @@ fun main() {
     println("init")
 
     //Test fibonacci
-    var fib: Int?
     val executionTimeFib = measureTime {
-        fib = fibonacciSingleWASM(100000000)
+        val n = 2147483647
+        for (i in 0 until n) {
+            fibonacciSingleWASM(i)
+        }
     }
-    println("Fibonacci 10ˆ8. Value: $fib, executionTime: $executionTimeFib")
+    println("Fibonacci 10ˆ8. Execution time: $executionTimeFib")
 
     //Test factorial
     var fat: Int?
